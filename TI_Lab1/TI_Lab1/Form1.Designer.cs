@@ -31,6 +31,8 @@
             this.btnEnterPlainText = new System.Windows.Forms.Button();
             this.txtPlainText = new System.Windows.Forms.TextBox();
             this.lblTest = new System.Windows.Forms.Label();
+            this.rdbTest1 = new System.Windows.Forms.RadioButton();
+            this.rdbTest2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnEnterPlainText
@@ -60,14 +62,39 @@
             this.lblTest.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblTest.Location = new System.Drawing.Point(547, 117);
             this.lblTest.Name = "lblTest";
-            this.lblTest.Size = new System.Drawing.Size(0, 26);
+            this.lblTest.Size = new System.Drawing.Size(65, 26);
             this.lblTest.TabIndex = 2;
+            this.lblTest.Text = "Label";
+            // 
+            // rdbTest1
+            // 
+            this.rdbTest1.AutoSize = true;
+            this.rdbTest1.Location = new System.Drawing.Point(245, 272);
+            this.rdbTest1.Name = "rdbTest1";
+            this.rdbTest1.Size = new System.Drawing.Size(42, 17);
+            this.rdbTest1.TabIndex = 3;
+            this.rdbTest1.TabStop = true;
+            this.rdbTest1.Text = "Lox";
+            this.rdbTest1.UseVisualStyleBackColor = true;
+            // 
+            // rdbTest2
+            // 
+            this.rdbTest2.AutoSize = true;
+            this.rdbTest2.Location = new System.Drawing.Point(245, 295);
+            this.rdbTest2.Name = "rdbTest2";
+            this.rdbTest2.Size = new System.Drawing.Size(49, 17);
+            this.rdbTest2.TabIndex = 4;
+            this.rdbTest2.TabStop = true;
+            this.rdbTest2.Text = "Pidor";
+            this.rdbTest2.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.rdbTest2);
+            this.Controls.Add(this.rdbTest1);
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.txtPlainText);
             this.Controls.Add(this.btnEnterPlainText);
@@ -84,6 +111,8 @@
         private System.Windows.Forms.Button btnEnterPlainText;
         private System.Windows.Forms.TextBox txtPlainText;
         private System.Windows.Forms.Label lblTest;
+        private System.Windows.Forms.RadioButton rdbTest1;
+        private System.Windows.Forms.RadioButton rdbTest2;
     }
 }
 
