@@ -16,15 +16,5 @@ namespace TI_Lab1
         {
             InitializeComponent();
         }
-
-        private void btnEnterPlainText_Click(object sender, EventArgs e)
-        {
-            lblTest.Text = txtPlainText.Text;
-        }
-
-        private void txtPlainText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

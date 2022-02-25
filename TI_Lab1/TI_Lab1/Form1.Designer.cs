@@ -30,77 +30,142 @@
         {
             this.btnEnterPlainText = new System.Windows.Forms.Button();
             this.txtPlainText = new System.Windows.Forms.TextBox();
-            this.lblTest = new System.Windows.Forms.Label();
-            this.rdbTest1 = new System.Windows.Forms.RadioButton();
-            this.rdbTest2 = new System.Windows.Forms.RadioButton();
+            this.rbdRailway = new System.Windows.Forms.RadioButton();
+            this.rdbColums = new System.Windows.Forms.RadioButton();
+            this.lblEnterPlaintText = new System.Windows.Forms.Label();
+            this.rdbVizhiner = new System.Windows.Forms.RadioButton();
+            this.txtKey = new System.Windows.Forms.TextBox();
+            this.lblEnterKey = new System.Windows.Forms.Label();
+            this.btnOpenFile = new System.Windows.Forms.Button();
+            this.btnSaveFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnterPlainText
             // 
+            this.btnEnterPlainText.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnterPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEnterPlainText.Location = new System.Drawing.Point(289, 98);
+            this.btnEnterPlainText.Location = new System.Drawing.Point(28, 443);
             this.btnEnterPlainText.Name = "btnEnterPlainText";
-            this.btnEnterPlainText.Size = new System.Drawing.Size(125, 38);
+            this.btnEnterPlainText.Size = new System.Drawing.Size(185, 54);
             this.btnEnterPlainText.TabIndex = 0;
-            this.btnEnterPlainText.Text = "Enter";
+            this.btnEnterPlainText.Text = "Зашифровать";
             this.btnEnterPlainText.UseVisualStyleBackColor = true;
-            this.btnEnterPlainText.Click += new System.EventHandler(this.btnEnterPlainText_Click);
             // 
             // txtPlainText
             // 
             this.txtPlainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPlainText.Location = new System.Drawing.Point(30, 98);
+            this.txtPlainText.Location = new System.Drawing.Point(28, 81);
+            this.txtPlainText.Multiline = true;
             this.txtPlainText.Name = "txtPlainText";
-            this.txtPlainText.Size = new System.Drawing.Size(233, 38);
+            this.txtPlainText.Size = new System.Drawing.Size(515, 130);
             this.txtPlainText.TabIndex = 1;
-            this.txtPlainText.TextChanged += new System.EventHandler(this.txtPlainText_TextChanged);
             // 
-            // lblTest
+            // rbdRailway
             // 
-            this.lblTest.AutoSize = true;
-            this.lblTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTest.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTest.Location = new System.Drawing.Point(547, 117);
-            this.lblTest.Name = "lblTest";
-            this.lblTest.Size = new System.Drawing.Size(65, 26);
-            this.lblTest.TabIndex = 2;
-            this.lblTest.Text = "Label";
+            this.rbdRailway.AutoSize = true;
+            this.rbdRailway.Checked = true;
+            this.rbdRailway.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbdRailway.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbdRailway.Location = new System.Drawing.Point(737, 31);
+            this.rbdRailway.Name = "rbdRailway";
+            this.rbdRailway.Size = new System.Drawing.Size(321, 30);
+            this.rbdRailway.TabIndex = 3;
+            this.rbdRailway.TabStop = true;
+            this.rbdRailway.Text = "Железнодорожная изгородь";
+            this.rbdRailway.UseVisualStyleBackColor = true;
             // 
-            // rdbTest1
+            // rdbColums
             // 
-            this.rdbTest1.AutoSize = true;
-            this.rdbTest1.Location = new System.Drawing.Point(245, 272);
-            this.rdbTest1.Name = "rdbTest1";
-            this.rdbTest1.Size = new System.Drawing.Size(42, 17);
-            this.rdbTest1.TabIndex = 3;
-            this.rdbTest1.TabStop = true;
-            this.rdbTest1.Text = "Lox";
-            this.rdbTest1.UseVisualStyleBackColor = true;
+            this.rdbColums.AutoSize = true;
+            this.rdbColums.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbColums.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbColums.Location = new System.Drawing.Point(737, 67);
+            this.rdbColums.Name = "rdbColums";
+            this.rdbColums.Size = new System.Drawing.Size(228, 30);
+            this.rdbColums.TabIndex = 4;
+            this.rdbColums.Text = "Столбцовый метод";
+            this.rdbColums.UseVisualStyleBackColor = true;
             // 
-            // rdbTest2
+            // lblEnterPlaintText
             // 
-            this.rdbTest2.AutoSize = true;
-            this.rdbTest2.Location = new System.Drawing.Point(245, 295);
-            this.rdbTest2.Name = "rdbTest2";
-            this.rdbTest2.Size = new System.Drawing.Size(49, 17);
-            this.rdbTest2.TabIndex = 4;
-            this.rdbTest2.TabStop = true;
-            this.rdbTest2.Text = "Pidor";
-            this.rdbTest2.UseVisualStyleBackColor = true;
+            this.lblEnterPlaintText.AutoSize = true;
+            this.lblEnterPlaintText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEnterPlaintText.Location = new System.Drawing.Point(22, 28);
+            this.lblEnterPlaintText.Name = "lblEnterPlaintText";
+            this.lblEnterPlaintText.Size = new System.Drawing.Size(322, 31);
+            this.lblEnterPlaintText.TabIndex = 5;
+            this.lblEnterPlaintText.Text = "Введите исходный текст";
+            // 
+            // rdbVizhiner
+            // 
+            this.rdbVizhiner.AutoSize = true;
+            this.rdbVizhiner.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbVizhiner.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbVizhiner.Location = new System.Drawing.Point(737, 100);
+            this.rdbVizhiner.Name = "rdbVizhiner";
+            this.rdbVizhiner.Size = new System.Drawing.Size(201, 30);
+            this.rdbVizhiner.TabIndex = 6;
+            this.rdbVizhiner.Text = "Шифр Вижинера";
+            this.rdbVizhiner.UseVisualStyleBackColor = true;
+            // 
+            // txtKey
+            // 
+            this.txtKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtKey.Location = new System.Drawing.Point(28, 282);
+            this.txtKey.Multiline = true;
+            this.txtKey.Name = "txtKey";
+            this.txtKey.Size = new System.Drawing.Size(515, 131);
+            this.txtKey.TabIndex = 7;
+            // 
+            // lblEnterKey
+            // 
+            this.lblEnterKey.AutoSize = true;
+            this.lblEnterKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEnterKey.Location = new System.Drawing.Point(22, 236);
+            this.lblEnterKey.Name = "lblEnterKey";
+            this.lblEnterKey.Size = new System.Drawing.Size(189, 31);
+            this.lblEnterKey.TabIndex = 8;
+            this.lblEnterKey.Text = "Введите ключ";
+            // 
+            // btnOpenFile
+            // 
+            this.btnOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnOpenFile.Location = new System.Drawing.Point(28, 574);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.Size = new System.Drawing.Size(316, 44);
+            this.btnOpenFile.TabIndex = 9;
+            this.btnOpenFile.Text = "Открыть файл";
+            this.btnOpenFile.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveFile
+            // 
+            this.btnSaveFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSaveFile.Location = new System.Drawing.Point(834, 574);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(348, 44);
+            this.btnSaveFile.TabIndex = 10;
+            this.btnSaveFile.Text = "Сохранить результаты в файл";
+            this.btnSaveFile.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
-            this.Controls.Add(this.rdbTest2);
-            this.Controls.Add(this.rdbTest1);
-            this.Controls.Add(this.lblTest);
+            this.ClientSize = new System.Drawing.Size(1251, 652);
+            this.Controls.Add(this.btnSaveFile);
+            this.Controls.Add(this.btnOpenFile);
+            this.Controls.Add(this.lblEnterKey);
+            this.Controls.Add(this.txtKey);
+            this.Controls.Add(this.rdbVizhiner);
+            this.Controls.Add(this.lblEnterPlaintText);
+            this.Controls.Add(this.rdbColums);
+            this.Controls.Add(this.rbdRailway);
             this.Controls.Add(this.txtPlainText);
             this.Controls.Add(this.btnEnterPlainText);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "ТИ 1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,9 +175,14 @@
 
         private System.Windows.Forms.Button btnEnterPlainText;
         private System.Windows.Forms.TextBox txtPlainText;
-        private System.Windows.Forms.Label lblTest;
-        private System.Windows.Forms.RadioButton rdbTest1;
-        private System.Windows.Forms.RadioButton rdbTest2;
+        private System.Windows.Forms.RadioButton rbdRailway;
+        private System.Windows.Forms.RadioButton rdbColums;
+        private System.Windows.Forms.Label lblEnterPlaintText;
+        private System.Windows.Forms.RadioButton rdbVizhiner;
+        private System.Windows.Forms.TextBox txtKey;
+        private System.Windows.Forms.Label lblEnterKey;
+        private System.Windows.Forms.Button btnOpenFile;
+        private System.Windows.Forms.Button btnSaveFile;
     }
 }
 
