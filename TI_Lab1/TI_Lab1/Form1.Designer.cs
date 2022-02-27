@@ -43,6 +43,7 @@
             this.btnEncipher = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnterPlainText
@@ -185,11 +186,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClear.Location = new System.Drawing.Point(28, 592);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(515, 48);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Очистить все поля";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1133, 652);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnEncipher);
             this.Controls.Add(this.lblCipherText);
             this.Controls.Add(this.textBox1);
@@ -229,6 +242,7 @@
         private System.Windows.Forms.Button btnEncipher;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

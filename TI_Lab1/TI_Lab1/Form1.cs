@@ -16,5 +16,12 @@ namespace TI_Lab1
         {
             InitializeComponent();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtKey.Text = string.Empty;
+            txtPlainText.Text = string.Empty;
+            textBox1.Text = string.Empty;
+        }
     }
 }
