@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test_TI1
+namespace TI_Lab1
 {
     internal class RailwayFence
     {
         public static string Encipher(string arg, int key)
         {
-            if (key > arg.Length || key == 1)
+            if (arg == String.Empty)
+            {
+                return arg;
+            }
+            if (key >= arg.Length || key == 1 || key == -1)
             {
                 return arg;
             };
@@ -51,9 +55,13 @@ namespace Test_TI1
         }
         public static string Decipher(string arg, int key)
         {
-            if (key > arg.Length || key == 1)
+            if (arg == String.Empty)
             {
-                return arg;
+                return arg.ToUpper();
+            }
+            if (key >= arg.Length || key == 1)
+            {
+                return arg.ToUpper();
             };
             StringBuilder sb = new StringBuilder();
             sb.Append(arg);
@@ -116,7 +124,7 @@ namespace Test_TI1
             {
                 if (Char.ToUpper(ch) <= 'Z' && Char.ToUpper(ch) >= 'A')
                 {
-                    sb.Append(ch);
+                    sb.Append(Char.ToUpper(ch));
                 }
             }
             return sb.ToString();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnEnterPlainText = new System.Windows.Forms.Button();
             this.txtPlainText = new System.Windows.Forms.TextBox();
             this.rbdRailway = new System.Windows.Forms.RadioButton();
@@ -56,6 +57,7 @@
             this.btnEnterPlainText.TabIndex = 0;
             this.btnEnterPlainText.Text = "Зашифровать";
             this.btnEnterPlainText.UseVisualStyleBackColor = true;
+            this.btnEnterPlainText.Click += new System.EventHandler(this.btnEnterPlainText_Click);
             // 
             // txtPlainText
             // 
@@ -142,6 +144,7 @@
             this.btnOpenFile.TabIndex = 9;
             this.btnOpenFile.Text = "Открыть файл";
             this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
             // btnSaveFile
             // 
@@ -152,6 +155,7 @@
             this.btnSaveFile.TabIndex = 10;
             this.btnSaveFile.Text = "Сохранить результаты в файл";
             this.btnSaveFile.UseVisualStyleBackColor = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
             // 
             // textBox1
             // 
@@ -159,6 +163,7 @@
             this.textBox1.Location = new System.Drawing.Point(28, 440);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(515, 130);
             this.textBox1.TabIndex = 11;
             // 
@@ -168,9 +173,9 @@
             this.lblCipherText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCipherText.Location = new System.Drawing.Point(22, 395);
             this.lblCipherText.Name = "lblCipherText";
-            this.lblCipherText.Size = new System.Drawing.Size(171, 31);
+            this.lblCipherText.Size = new System.Drawing.Size(143, 31);
             this.lblCipherText.TabIndex = 12;
-            this.lblCipherText.Text = "Шифротекст";
+            this.lblCipherText.Text = "Результат";
             // 
             // btnEncipher
             // 
@@ -181,10 +186,19 @@
             this.btnEncipher.TabIndex = 13;
             this.btnEncipher.Text = "Расшифровать";
             this.btnEncipher.UseVisualStyleBackColor = true;
+            this.btnEncipher.Click += new System.EventHandler(this.btnEncipher_Click);
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "Document";
+            this.openFileDialog1.Filter = "\"Text files(*.txt)|*.txt|All files(*.*)|*.*\"";
+            this.openFileDialog1.InitialDirectory = "D:\\БГУИР\\4 сем\\TI\\TI_Lab1";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileName = "Документ";
+            this.saveFileDialog1.Filter = "\"Text files(*.txt)|*.txt|All files(*.*)|*.*\"";
+            this.saveFileDialog1.InitialDirectory = "D:\\БГУИР\\4 сем\\TI\\TI_Lab1";
             // 
             // btnClear
             // 
@@ -217,6 +231,7 @@
             this.Controls.Add(this.txtPlainText);
             this.Controls.Add(this.btnEnterPlainText);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ТИ 1";
