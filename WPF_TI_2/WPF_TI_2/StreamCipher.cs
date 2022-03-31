@@ -32,7 +32,6 @@ namespace WPF_TI_2
 
         public BitArray MakeBitReg(StringBuilder reg)
         {
-            reg = Read_reg(reg);
             BitArray reg_bit = new BitArray(reg.Length);
             for (int i = 0; i < reg.Length; i++)
             {

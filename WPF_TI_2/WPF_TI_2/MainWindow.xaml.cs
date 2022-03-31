@@ -28,9 +28,14 @@ namespace WPF_TI_2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder stringBuilder = new StringBuilder();
-            
             obj.reg.Append(txtEnterStringReg.Text);
+            obj.reg = obj.Read_reg(obj.reg);
             obj.reg_bit = obj.MakeBitReg(obj.reg);
+            txtEnterStringReg.Text = "";
+            for (int i = obj.reg.Length - 1; i >= 0; i--)
+            {
+                txtEnterStringReg.Text += obj.reg[i];
+            }
             if (obj.reg.Length != 37) MessageBox.Show("Введён неправильный ключ");
             else
             {
