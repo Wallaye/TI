@@ -11,7 +11,7 @@ namespace TI_3
         public static bool checkIsPrime(int value)
         {
             if (value < 2) return false;
-            for (int i = 2; i <= value / 2; i++)
+            for (int i = 2; i <= Math.Sqrt(value); i++)
             {
                 if (value % i == 0) return false;
             }
@@ -46,10 +46,10 @@ namespace TI_3
         public static byte[] Decipher(int[] arr, int n, int b, int p, int q)
         {
             byte[] result = new byte[arr.Length];
-            int Discr;
-            int[] d = new int[4];
-            int[] data = new int[4];
-            int mp, mq, yp, yq;
+            long Discr;
+            long[] d = new long[4];
+            long[] data = new long[4];
+            long mp, mq, yp, yq;
             Euclide(p, q, out yp, out yq);
             for (int i = 0; i < arr.Length; i++)
             {
@@ -64,12 +64,12 @@ namespace TI_3
                 {
                     if ((d[k] - b) % 2 == 0) data[k] = ((d[k] - b) / 2 % n);
                     else data[k] = (d[k] - b + n) / 2 % n;
-                    if (data[k] < 0)
-                    {
-                        data[k] = Math.Abs(data[k]);
-                        data[k]--;
-                    }
-                    if (data[k] is (>= 0 and <= 255))
+                    //if (data[k] < 0)
+                    //{
+                    //    data[k] = Math.Abs(data[k]);
+                    //    data[k]--;
+                    //}
+                    if ((byte)data[k] == data[k])
                     {
                         result[i] = (byte)data[k];
                         break;
@@ -81,20 +81,20 @@ namespace TI_3
         /// <summary>
         /// Extended Euclide algorithm
         /// </summary>
-        public static void Euclidix(int a, int b, out int x1, out int y1, out int d1)
+        public static void Euclidix(int a, int b, out long x1, out long y1, out long d1)
         {
-            int d0 = a;
+            long d0 = a;
             d1 = b;
-            int x0 = 1;
+            long x0 = 1;
             x1 = 0;
-            int y0 = 0;
+            long y0 = 0;
             y1 = 1;
             while (d1 > 1)
             {
-                int q = d0 % d1;
-                int d2 = d0 / d1;
-                int x2 = x0 - q * x1;
-                int y2 = y0 - q * x1;
+                long q = d0 % d1;
+                long d2 = d0 / d1;
+                long x2 = x0 - q * x1;
+                long y2 = y0 - q * x1;
                 d0 = d1;
                 d1 = d2;
                 x0 = x1;
@@ -107,11 +107,11 @@ namespace TI_3
         /// Quick pow algorithm
         /// </summary>
         /// <returns>The result of modular multiplication</returns>
-        public static int QuickPow(int num, int pow, int mod)
+        public static long QuickPow(long num, long pow, long mod)
         {
-            int x = num;
-            int z = pow;
-            int result = 1;
+            long x = num;
+            long z = pow;
+            long result = 1;
             while (z != 0)
             {
                 while (z % 2 == 0)
@@ -132,7 +132,7 @@ namespace TI_3
         /// It is recursive algorithm of Euclide, x and y are passed like out parametrs and they are
         /// coefficients yp yq
         /// </remarks>
-        public static int Euclide(int a, int b, out int x, out int y)
+        public static long Euclide(long a, long b, out long x, out long y)
         {
             if (a == 0)
             {
@@ -140,9 +140,9 @@ namespace TI_3
                 y = 1;
                 return b;
             }
-            int gcd = Euclide(b % a, a, out x, out y);
-            int newY = x;
-            int newX = y - b / a * x;
+            long gcd = Euclide(b % a, a, out x, out y);
+            long newY = x;
+            long newX = y - b / a * x;
             x = newX;
             y = newY;
             return gcd;

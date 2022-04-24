@@ -5,17 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_TI3"
         mc:Ignorable="d"
-        Title="Rabin" Height="800" Width="1200">
+        Title="Rabin" Height="820" Width="1200">
     <Grid Background="#FFE4E4E4">
         <Label Content="Введите P:" HorizontalAlignment="Left" Height="36" Margin="38,26,0,0" VerticalAlignment="Top" Width="112" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="txtInputP" HorizontalAlignment="Left" Height="36" Margin="155,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="20" PreviewTextInput="txtInputP_PreviewTextInput"/>
         <Label Content="Введите Q:" HorizontalAlignment="Left" Height="38" Margin="38,80,0,0" VerticalAlignment="Top" Width="112" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"/>
         <TextBox x:Name="txtInputQ" HorizontalAlignment="Left" Height="38" Margin="155,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="20" PreviewTextInput="txtInputQ_PreviewTextInput"/>
-        <Label Content="N =" HorizontalAlignment="Left" Height="36" Margin="38,203,0,0" VerticalAlignment="Top" Width="42" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <Button x:Name="btnCalcN" Content="Посчитать N" HorizontalAlignment="Left" Height="38" Margin="38,259,0,0" VerticalAlignment="Top" Width="221" FontSize="20" Click="btnCalcN_Click"/>
-        <Label x:Name="lblN" Content="" HorizontalAlignment="Left" Height="36" Margin="108,203,0,0" VerticalAlignment="Top" Width="151" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <Label Content="N =" HorizontalAlignment="Left" Height="36" Margin="38,197,0,0" VerticalAlignment="Top" Width="42" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnCalcN" Content="Посчитать N" HorizontalAlignment="Left" Height="38" Margin="38,253,0,0" VerticalAlignment="Top" Width="221" FontSize="20" Click="btnCalcN_Click"/>
+        <Label x:Name="lblN" Content="" HorizontalAlignment="Left" Height="36" Margin="108,197,0,0" VerticalAlignment="Top" Width="151" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
         <Label Content="Введите B:" HorizontalAlignment="Left" Height="44" Margin="38,137,0,0" VerticalAlignment="Top" Width="112" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"/>
         <TextBox x:Name="txtInputB" HorizontalAlignment="Left" Height="38" Margin="155,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="20" PreviewTextInput="txtInputB_PreviewTextInput"/>
+        <Button x:Name="btnOpenSrcFile" Content="Открыть исходный файл" HorizontalAlignment="Left" Height="50" Margin="38,333,0,0" VerticalAlignment="Top" Width="221" FontSize="18" Click="btnOpenSrcFile_Click"/>
+        <Button x:Name="btnOpenCipheredFile" Content="Открыть шифрофайл" HorizontalAlignment="Left" Height="50" Margin="38,402,0,0" VerticalAlignment="Top" Width="221" FontSize="18" Click="btnOpenCipheredFile_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="6" Margin="38,308,0,0" VerticalAlignment="Top" Width="221" Fill="#FF484848"/>
+        <Button x:Name="btnSavePlainFile" Content="Сохранить исходный файл" HorizontalAlignment="Left" Height="50" Margin="38,473,0,0" VerticalAlignment="Top" Width="221" FontSize="17" Click="btnSavePlainFile_Click"/>
+        <Button x:Name="btnSaveCipheredFile" Content="Сохранить шифрофайл" HorizontalAlignment="Left" Height="50" Margin="38,545,0,0" VerticalAlignment="Top" Width="221" FontSize="18" Click="btnSaveCipheredFile_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="6" Margin="38,613,0,0" VerticalAlignment="Top" Width="221" Fill="#FF484848"/>
+        <Button x:Name="btnCipher" Content="Зашифровать" HorizontalAlignment="Left" Height="50" Margin="38,635,0,0" VerticalAlignment="Top" Width="221" Background="#FF87E289" FontSize="20" Click="btnCipher_Click"/>
+        <Button x:Name="btnDecipher" Content="Дешифровать" HorizontalAlignment="Left" Height="50" Margin="38,703,0,0" VerticalAlignment="Top" Width="221" FontSize="20" Background="#FFA79BE4" Click="btnDecipher_Click"/>
+        <TextBox x:Name="txtPlain" HorizontalAlignment="Left" Height="334" Margin="332,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="814" FontSize="18"/>
+        <Label Content="Исходный файл:" HorizontalAlignment="Left" Height="34" Margin="332,10,0,0" VerticalAlignment="Top" Width="143" FontSize="17"/>
+        <TextBox x:Name="txtCipher" HorizontalAlignment="Left" Height="326" Margin="332,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="814" FontSize="18"/>
+        <Label Content="Зашифрованный текст:" HorizontalAlignment="Left" Height="40" Margin="332,388,0,0" VerticalAlignment="Top" Width="206" FontSize="18"/>
 
     </Grid>
 </Window>
