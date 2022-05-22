@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_TI3"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Rabin" Height="820" Width="1200">
     <Grid Background="#FFE4E4E4">
         <Label Content="Введите P:" HorizontalAlignment="Left" Height="36" Margin="38,26,0,0" VerticalAlignment="Top" Width="112" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>

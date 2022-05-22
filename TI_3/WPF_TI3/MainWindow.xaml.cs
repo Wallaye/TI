@@ -59,10 +59,10 @@ namespace WPF_TI3
         {
             int p, q, n, b;
             p = 0; q = 0; n = 0; b = 0;
-            if (txtInputP.Text != "")
+            if (txtInputP.Text != "" && txtInputP.Text.Length <= 6)
                 p = int.Parse(txtInputP.Text);
             else txtInputP.Background = Brushes.Red;
-            if (txtInputQ.Text != "")
+            if (txtInputQ.Text != "" && (txtInputQ.Text.Length <= 6))
                 q = int.Parse(txtInputQ.Text);
             else txtInputQ.Background = Brushes.Red;
             bool flag1 = Rabin.checkIsPrime(p) && Rabin.checkModule4(p);
@@ -85,6 +85,11 @@ namespace WPF_TI3
                         else txtInputB.Background = Brushes.Red;
                     }
                     else txtInputB.Background = Brushes.Red;
+                    if (n < 256)
+                    {
+                        canCompute = false;
+                        MessageBox.Show("N < 256. Пересчитайте");
+                    }
                 }
                 else txtInputQ.Background = Brushes.Red;
             }

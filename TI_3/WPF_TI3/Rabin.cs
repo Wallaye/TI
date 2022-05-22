@@ -64,11 +64,6 @@ namespace TI_3
                 {
                     if ((d[k] - b) % 2 == 0) data[k] = ((d[k] - b) / 2 % n);
                     else data[k] = (d[k] - b + n) / 2 % n;
-                    //if (data[k] < 0)
-                    //{
-                    //    data[k] = Math.Abs(data[k]);
-                    //    data[k]--;
-                    //}
                     if ((byte)data[k] == data[k])
                     {
                         result[i] = (byte)data[k];
@@ -81,14 +76,14 @@ namespace TI_3
         /// <summary>
         /// Extended Euclide algorithm
         /// </summary>
-        public static void Euclidix(int a, int b, out long x1, out long y1, out long d1)
+        public static void Euclidix(int a, int b, out long x, out long y)
         {
             long d0 = a;
-            d1 = b;
+            long d1 = b;
             long x0 = 1;
-            x1 = 0;
+            long x1 = 0;
             long y0 = 0;
-            y1 = 1;
+            long y1 = 1;
             while (d1 > 1)
             {
                 long q = d0 % d1;
@@ -102,6 +97,8 @@ namespace TI_3
                 x1 = x2;
                 y1 = y2;
             }
+            x = x0;
+            y = y0;
         }
         /// <summary>
         /// Quick pow algorithm
@@ -124,6 +121,8 @@ namespace TI_3
             }
             return result;
         }
+
+
 
         /// <summary>
         /// Extended Euclide algorithm
