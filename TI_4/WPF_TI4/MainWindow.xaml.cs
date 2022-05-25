@@ -84,6 +84,13 @@ namespace WPF_TI4
                 return false;
             }
 
+            if (!DSA.checkQdivsP(p, q))
+            {
+                MessageBox.Show("Введите Q являющееся делителем (P-1)");
+                return false;
+            }
+
+
             if (!long.TryParse(txtEnterH.Text, out h))
             {
                 MessageBox.Show("Введите H");
@@ -114,12 +121,6 @@ namespace WPF_TI4
             else if (!DSA.checkNumberForInterval(k, 1, q - 1))
             {
                 MessageBox.Show("Введите K в интервале (0, q)");
-                return false;
-            }
-
-            if (!DSA.checkQdivsP(p, q))
-            {
-                MessageBox.Show("Введите Q являющееся делителем (P-1)");
                 return false;
             }
 
@@ -221,7 +222,7 @@ namespace WPF_TI4
                 MessageBox.Show("Файл не подписан");
                 return;
             }
-            long p, q, g, y, h, k, x;
+            long p, q, g, y, h, x;
             p = long.Parse(txtEnterP.Text);
             q = long.Parse(txtrEnterQ.Text);
             h = long.Parse(txtEnterH.Text);
@@ -239,13 +240,12 @@ namespace WPF_TI4
             long v;
             if (DSA.validateSigning(q, p, r, s, g, y, hash, out v))
             {
-                MessageBox.Show($"Файл подписан верно\n{v} == {r}");
+                MessageBox.Show($"Файл подписан верно\n{v} == {r}\n{hash}");
             } 
             else
             {
-                MessageBox.Show($"Невалидная подпись файла!\n{v} != {r}");
+                MessageBox.Show($"Невалидная подпись файла!\nv - {v} != {r} - r\nHash = {hash}");
             }
-
         }
     }
 }

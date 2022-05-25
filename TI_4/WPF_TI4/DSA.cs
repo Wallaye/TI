@@ -81,7 +81,7 @@ namespace WPF_TI4
         /// <summary>
         /// Signing source with DSA
         /// </summary>
-        /// <param name="source">sorce array of bytes</param>
+        /// <param name="source">source array of bytes</param>
         public static void Sign(long g, long k, long p, long q, long x, long h, out long r, out long s)
         {
             r = QuickPow(g, k, p) % q;
@@ -92,10 +92,10 @@ namespace WPF_TI4
         /// <summary>
         /// Validates the signing of DSA
         /// </summary>
-        public static bool validateSigning(long q, long p, long r, long s, long g, long y, long h, out long v)
+        public static bool validateSigning(long q, long p, long r, long s, long g, long y, long hash, out long v)
         {
             long w = computeInversionalValue(s, q);
-            long u1 = (h * w) % q;
+            long u1 = (hash * w) % q;
             long u2 = (r * w) % q;
             v = QuickPow(g, u1, p) * QuickPow(y, u2, p) % p % q;
             if (v == r) return true;
